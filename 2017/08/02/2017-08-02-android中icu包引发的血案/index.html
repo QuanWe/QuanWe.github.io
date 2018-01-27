@@ -189,7 +189,13 @@
             <p>最近同事遇到一个自定义控件,在低版本下导致闪退的问题,<br>原因是加载没有成功,之前以为是使用了高版本Api(似乎是5.0开始引入的),几经排查后,发现是使用的大数字计算的类<code>BigDecimal</code> 引入的包不对.<br>使用的是这个类.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android.icu.math.BigDecimal</span><br></pre></td></tr></table></figure>
 <p><code>android.icu.*</code> 包中包含许多原<code>java.*</code> 中的工具类和方法,但只在高版本中可以使用.在导入包时需要注意区分.<br>就目前看而言,<code>android.icu.*</code>中做了一些缓存和优化工作,二者并没有太大的区别</p>
-<p>icu下包含的包.<br><img src="http://img.blog.csdn.net/20170802182802215?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYTk3NjExMjY0Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>在使用java.math等包下的类时一定要注意区分.</p>
+<p>icu下包含的包.<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170802182802215?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYTk3NjExMjY0Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure><br>在使用java.math等包下的类时一定要注意区分.</p>
 
         </div>
 
